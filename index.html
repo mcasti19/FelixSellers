@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conviértete en un Agente de Seguros Exitoso</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary': '#FF4500', // OrangeRed
+                        'primary-hover': '#CC3700', // Darker OrangeRed
+                        'secondary': '#FFD700', // Gold
+                        'dark': '#121212', // Almost Black
+                        'light': '#F5F5F5', // White Smoke
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-dark text-light">
+
+    <!-- Header -->
+    <header class="bg-dark text-white shadow-md">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-secondary">Tu Logo</a>
+            <div class="hidden md:flex space-x-6">
+                <a href="#video" class="text-gray-300 hover:text-secondary">Oportunidad</a>
+                <a href="#citas" class="text-gray-300 hover:text-secondary">Regístrate</a>
+                <a href="#contacto" class="text-gray-300 hover:text-secondary">Contacto</a>
+            </div>
+            <button id="mobile-menu-button" class="md:hidden flex items-center">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </nav>
+        <div id="mobile-menu" class="hidden md:hidden bg-dark">
+            <a href="#video" class="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-700">Oportunidad</a>
+            <a href="#citas" class="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-700">Regístrate</a>
+            <a href="#contacto" class="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-700">Contacto</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <main class="container mx-auto px-6 py-12">
+        <div class="text-center">
+            <h1 class="text-4xl font-bold mb-4 text-secondary">Construye tu Futuro como Agente de Seguros</h1>
+            <p class="text-lg text-gray-300">Descubre cómo puedes alcanzar la independencia financiera y ayudar a otros a proteger su futuro.</p>
+        </div>
+    </main>
+
+    <!-- Video Section -->
+    <section id="video" class="py-12 bg-dark">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl font-bold mb-6 text-secondary">Una Carrera con Propósito y Grandes Ingresos</h2>
+            <div class="w-full max-w-3xl mx-auto bg-black rounded-lg overflow-hidden">
+                <video class="w-full h-auto" controls>
+                    <source src="assets/video/VENTA_EMOCIONAL_para_AGENTES_DE_SEGUROS.mp4" type="video/mp4">
+                    Tu navegador no soporta la etiqueta de video.
+                </video>
+            </div>
+        </div>
+    </section>
+
+    <!-- Citas Section -->
+    <section id="citas" class="py-12">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl font-bold mb-6 text-secondary">Inicia tu Carrera Hoy</h2>
+            <p class="text-gray-300 mb-8">Regístrate para nuestro evento informativo y da el primer paso hacia el éxito.</p>
+            <a href="#contacto" class="bg-primary text-white font-bold py-3 px-6 rounded-lg hover:bg-primary-hover">Regístrate Gratis</a>
+        </div>
+    </section>
+
+    <!-- Contacto Section -->
+    <section id="contacto" class="py-12 bg-dark">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-6 text-secondary">¿Tienes Preguntas?</h2>
+            <form class="max-w-lg mx-auto">
+                <div class="mb-4">
+                    <label for="nombre" class="block text-light font-bold mb-2">Nombre</label>
+                    <input type="text" id="nombre" name="nombre" class="w-full px-3 py-2 border rounded-lg bg-gray-700 text-light border-gray-600 focus:outline-none focus:ring-2 focus:ring-secondary" required>
+                </div>
+                <div class="mb-4">
+                    <label for="apellido" class="block text-light font-bold mb-2">Apellido</label>
+                    <input type="text" id="apellido" name="apellido" class="w-full px-3 py-2 border rounded-lg bg-gray-700 text-light border-gray-600 focus:outline-none focus:ring-2 focus:ring-secondary" required>
+                </div>
+                <div class="mb-4">
+                    <label for="correo" class="block text-light font-bold mb-2">Correo Electrónico</label>
+                    <input type="email" id="correo" name="correo" class="w-full px-3 py-2 border rounded-lg bg-gray-700 text-light border-gray-600 focus:outline-none focus:ring-2 focus:ring-secondary" required>
+                </div>
+                <div class="text-center">
+                    <button type="submit" class="bg-primary text-white font-bold py-3 px-6 rounded-lg hover:bg-primary-hover">Enviar</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-6">
+        <div class="container mx-auto px-6 text-center">
+            <p>&copy; 2025 Tu Empresa. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+
+</body>
+</html>
