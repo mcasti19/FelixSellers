@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Conviértete en un Agente de Seguros Exitoso</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./assets/css/styles.css">
     <script>
         tailwind.config = {
             theme: {
@@ -14,6 +15,7 @@
                         'primary': '#FF4500', // OrangeRed
                         'primary-hover': '#CC3700', // Darker OrangeRed
                         'secondary': '#FFD700', // Gold
+                        'secondary': '#FFFFFF', // Gold
                         'dark': '#121212', // Almost Black
                         'light': '#F5F5F5', // White Smoke
                     }
@@ -22,25 +24,68 @@
         }
     </script>
 
-    <style>
-        li {
+    <!-- <style>
+        /* li {
             list-style: square;
+        } */
+        /* Flip card styles for #META cards */
+        .meta-grid { perspective: 1200px; }
+        .flip-card {
+            -webkit-tap-highlight-color: transparent;
         }
-    </style>
+        .flip-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            transition: transform 0.6s;
+            transform-style: preserve-3d;
+        }
+        /* trigger on hover or focus-within for keyboard accessibility */
+        .flip-card:hover .flip-inner,
+        .flip-card:focus-within .flip-inner {
+            transform: rotateY(180deg);
+        }
+        .flip-front,
+        .flip-back {
+            position: absolute;
+            inset: 0;
+            backface-visibility: hidden;
+            -webkit-backface-visibility: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1rem;
+        }
+        .flip-front {
+            background: linear-gradient(135deg, #fff 0%, #f7f7f7 100%);
+        }
+        .letter-only {
+            font-size: 3.25rem;
+            font-weight: 800;
+            letter-spacing: .02em;
+        }
+        .flip-back {
+            transform: rotateY(180deg);
+            background: white;
+            text-align: left;
+        }
+        /* small shadow and smoothness */
+        .flip-card .border-2 { box-shadow: 0 8px 20px rgba(0,0,0,0.08); }
+    </style> -->
 </head>
 
-<body class="bg-dark text-light border-0">
+<body class="bg-light text-dark border-0">
 
     <!-- Header -->
-    <header class="bg-green-900 text-white shadow-md sticky top-0 z-10">
+    <header class="bg-slate-950 text-white shadow-md sticky top-0 z-10">
         <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="#" class="text-2xl font-bold text-secondary">
+            <a href="#" class="text-2xl font-bold text-dark">
                 <img src="assets/images/logo.png" alt="logo" class="w-16 h-auto">
             </a>
             <div class="hidden md:flex space-x-6">
-                <a href="#video" class="text-gray-300 hover:text-secondary">Oportunidad</a>
-                <a href="#citas" class="text-gray-300 hover:text-secondary">Regístrate</a>
-                <a href="#contacto" class="text-gray-300 hover:text-secondary">Contacto</a>
+                <a href="#video" class="text-dark-300 hover:text-dark">Oportunidad</a>
+                <a href="#citas" class="text-dark-300 hover:text-dark">Regístrate</a>
+                <a href="#contacto" class="text-dark-300 hover:text-dark">Contacto</a>
             </div>
             <button id="mobile-menu-button" class="md:hidden flex items-center">
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
@@ -50,39 +95,27 @@
                 </svg>
             </button>
         </nav>
-        <div id="mobile-menu" class="hidden md:hidden bg-dark">
-            <a href="#video" class="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-700">Oportunidad</a>
-            <a href="#citas" class="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-700">Regístrate</a>
-            <a href="#contacto" class="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-700">Contacto</a>
+        <div id="mobile-menu" class="hidden md:hidden bg-light">
+            <a href="#video" class="block px-4 py-2 text-sm text-dark-300 hover:bg-gray-700">Oportunidad</a>
+            <a href="#citas" class="block px-4 py-2 text-sm text-dark-300 hover:bg-gray-700">Regístrate</a>
+            <a href="#contacto" class="block px-4 py-2 text-sm text-dark-300 hover:bg-gray-700">Contacto</a>
         </div>
     </header>
 
     <!-- Hero Section -->
-    <main class="container mx-auto px-8 py-12">
+    <main class="container mx-auto px-6 py-6 border-0">
         <!-- <img src="assets/images/banner.png" alt="Banner_evento" class="mx-auto"> -->
         <div class="text-center border-0 mt-6">
-            <h1 class="text-4xl font-bold mb-4 text-secondary">Construye tu Futuro como Agente de Seguros</h1>
-            <!-- <p class="text-lg text-gray-300">Descubre cómo puedes alcanzar la independencia financiera y ayudar a otros
+            <h1 class="text-4xl font-bold mb-2 text-dark">Construye tu Futuro como Agente de Seguros</h1>
+            <!-- <p class="text-lg text-dark-300">Descubre cómo puedes alcanzar la independencia financiera y ayudar a otros
                 a proteger su futuro.</p> -->
         </div>
     </main>
-
-    <section id="citas" class="py-2">
-        <div class="container mx-auto px-2 text-center">
-            <h2 class="text-3xl font-bold mb-2 text-secondary">Inicia tu Carrera Hoy</h2>
-            <p class="text-gray-300 mb-6">Regístrate para nuestro evento informativo y da el primer paso hacia el éxito.
-            </p>
-            <a href="#contacto"
-                class="bg-primary text-white font-bold py-3 px-6 rounded-lg hover:bg-primary-hover">Regístrate
-                Gratis</a>
-        </div>
-    </section>
-
     <!-- Video Section -->
-    <section id="video" class="py-4 bg-dark border-0">
+    <section id="video" class="py-4 bg-light border-0">
         <div class="container mx-auto px-6 text-center">
-            <!-- <h2 class="text-3xl font-bold mb-6 text-secondary">Una Carrera con Propósito y Grandes Ingresos</h2> -->
-            <div class="w-full max-w-3xl mx-auto bg-black rounded-lg overflow-hidden">
+            <!-- <h2 class="text-3xl font-bold mb-6 text-dark">Una Carrera con Propósito y Grandes Ingresos</h2> -->
+            <div class="w-full max-w-5xl mx-auto bg-black rounded-lg overflow-hidden">
                 <video class="w-full h-auto" controls>
                     <source src="assets/video/Video.mp4" type="video/mp4">
                     Tu navegador no soporta la etiqueta de video.
@@ -91,8 +124,19 @@
         </div>
     </section>
 
-    <section id="despertar" class="py-12 bg-dark">
-        <div class="container mx-auto px-6 text-justify max-w-3xl">
+    <section id="citas" class="py-2">
+        <div class="container mx-auto px-2 text-center">
+            <h2 class="text-3xl font-bold mb-2 text-dark">Inicia tu Carrera Hoy</h2>
+            <p class="text-dark-300 mb-6">Regístrate para nuestro evento informativo y da el primer paso hacia el éxito.
+            </p>
+            <a href="#contacto"
+                class="bg-primary text-white font-bold py-3 px-6 rounded-lg hover:bg-primary-hover">Regístrate
+                Gratis</a>
+        </div>
+    </section>
+
+    <section id="despertar" class="py-12 bg-light">
+        <div class="container mx-auto px-6 text-justify max-w-5xl">
             <h2 class="text-3xl mb-2 text-center">Detente a pensar por un momento.</h2>
             <p class="text-lg text-left">
                 Dejaste todo y sacrificaste tu estabilidad por una promesa: el Sueño
@@ -117,8 +161,8 @@
     <!-- Citas Section -->
     <!-- <section id="citas" class="py-6">
         <div class="container mx-auto px-6 text-center">
-            <h2 class="text-3xl font-bold mb-6 text-secondary">Inicia tu Carrera Hoy</h2>
-            <p class="text-gray-300 mb-4">Regístrate para nuestro evento informativo y da el primer paso hacia el éxito.
+            <h2 class="text-3xl font-bold mb-6 text-dark">Inicia tu Carrera Hoy</h2>
+            <p class="text-dark-300 mb-4">Regístrate para nuestro evento informativo y da el primer paso hacia el éxito.
             </p>
             <a href="#contacto"
                 class="bg-primary text-white font-bold py-3 px-6 rounded-lg hover:bg-primary-hover">Regístrate
@@ -126,8 +170,8 @@
         </div>
     </section> -->
 
-    <!-- <section id="sueñoAmericano" class="py-12 bg-dark">
-        <div class="container mx-auto px-6 text-justify max-w-3xl">
+    <!-- <section id="sueñoAmericano" class="py-12 bg-light">
+        <div class="container mx-auto px-6 text-justify max-w-5xl">
             <h2 class="text-3xl mb-2 text-center"><b>Tu Transformación Financiera Comienza con una M.E.T.A.</b></h2>
             <p class="text-lg text-left">
                 Es la pregunta que quema. El sueño americano no es solo trabajar duro; es ganar ilimitadamente,
@@ -141,8 +185,8 @@
     <!-- Citas Section -->
     <section id="citas" class="py-2">
         <div class="container mx-auto px-2 text-center">
-            <h2 class="text-3xl font-bold mb-2 text-secondary">Inicia tu Carrera Hoy</h2>
-            <p class="text-gray-300 mb-6">Regístrate para nuestro evento informativo y da el primer paso hacia el éxito.
+            <h2 class="text-3xl font-bold mb-2 text-dark">Inicia tu Carrera Hoy</h2>
+            <p class="text-dark-300 mb-6">Regístrate para nuestro evento informativo y da el primer paso hacia el éxito.
             </p>
             <a href="#contacto"
                 class="bg-primary text-white font-bold py-3 px-6 rounded-lg hover:bg-primary-hover">Regístrate
@@ -152,81 +196,115 @@
 
 
 
-    <section id="transformation" class="py-12 bg-dark">
-        <div class="container mx-auto px-6 text-justify max-w-3xl">
+    <section id="transformation" class="py-12 bg-gray-100">
+        <div class="container mx-auto px-6 text-justify max-w-5xl ">
             <h2 class="text-3xl mb-2 text-center">Tu Transformación Financiera Comienza con una <b>M.E.T.A.</b></h2>
             <p class="text-lg text-left">
-                Hemos diseñado un modelo de negocio que capitaliza tu disciplina y tu hambre de éxito las mismas
-                cualidades que te trajeron hasta aquí— y las enfoca en el sector más anticrisis y lucrativo de Estados
-                Unidos: el de los seguros.
-            </p>
-            <br>
-            <p class="text-lg text-left">
-                <b>M: Miedos - Conviértelos en Combustible:</b>
-                El miedo de llegar sin recursos, el miedo a la inestabilidad, el miedo de fallarle a tu familia... esos
-                son los demonios que enfrentaste al pisar esta tierra.<br><br>
-
-                En nuestra industria, ese miedo tiene un nombre diferente: Necesidad de Protección. Nuestro negocio se
-                basa en vender la solución a esa necesidad universal. Dejas de ser la víctima de la incertidumbre para
-                convertirte en el arquitecto de la certeza para miles de latinos que, como tú, buscan blindar su futuro.
-            </p>
-            <br>
-            <p class="text-lg text-left">
-                <b>E: Estrategia - El Mapa para la Riqueza Ilimitada</b>
-                Vence el miedo a lo desconocido con una Estrategia ÚNICA, probada y escalable. Nuestro sistema no es
-                otra charla de motivación; es una impresora de éxito.<br><br>
-
-                Mientras otros se enfocan en la venta de un solo producto, nosotros te equipamos para convertirte en un
-                Consultor de Patrimonio Integral. Te enseñamos a:
-                <br>
-                <br>
-
-            <ul>
-                <li class="style-circle">Construir Ingreso Residual: Gana hoy por el trabajo que hiciste ayer, creando
-                    un flujo de caja que
-                    resiste las recesiones.</li>
-                <li class="style-circle">Dominar el Nicho Latino: Accede a una comunidad leal y en crecimiento que
-                    necesita tu experiencia y
-                    confianza.</li>
-                <li class="style-circle">Liderar y Duplicar: Desarrolla equipos que te permiten generar ingresos
-                    mientras inviertes tu tiempo
-                    en
-                    tu crecimiento personal y liderazgo (la clave que atrae a todo coach motivacional)</li>
-            </ul>
+                Hemos diseñado un modelo de negocio que capitaliza tu disciplina y tu hambre de éxito —las mismas
+                cualidades que te trajeron hasta aquí— y las enfoca en el sector más anticrisis y lucrativo de
+                Estados Unidos: el de los seguros.
             </p>
 
-            <br>
-            <p class="text-lg text-left">
-                <b>T: Tiempo - Prepárate con Especialistas</b>
-                En la alta gerencia, el tiempo es sinónimo de valor. Deja de desperdiciar horas en métodos obsoletos.
+            <div id="META" class="meta-grid grid grid-cols-1 md:grid-cols-2 gap-6 mt-6 ">
 
-                Tu preparación será acelerada con Especialistas y Licenciados con décadas de éxito en el mercado
-                estadounidense. <br><br>
-                Accederás a un sistema de mentoring donde:
+                <div class="min-h-64 flip-card border-2 rounded-lg overflow-hidden bg-white shadow-xl" tabindex="0"
+                    aria-labelledby="meta-m">
+                    <div class="flip-inner h-full">
 
-            <ul>
-                <li>Recibirás el guion de ventas de alto valor que te posiciona como experto inmediatamente.</li>
-                <li>Dominarás el marco legal y financiero sin necesidad de un MBA.</li>
-                <li>Te capacitaremos para obtener las licencias necesarias de manera rápida y efectiva.</li>
-                <li>Tu inversión de tiempo se traduce en ingresos de alto nivel gracias a la guía de quienes ya
-                    recorrieron el camino.</li>
-            </ul>
+                        <div class="flip-front p-6 bg-blue-600 text-white flex items-center justify-center h-full">
+                            <span id="meta-m" class="text-9xl font-extrabold letter-only">M</span>
+                        </div>
 
-            </p>
-            <br>
-            <p class="text-lg text-left">
-                <b>A: Acciones - Tu Legado Comienza Hoy</b><br>
-                Basta de excusas, basta de esperar el momento "perfecto". La diferencia entre un sueño y un objetivo es
-                una fecha de inicio. La vida que siempre has querido no está detrás de la próxima promoción; está detrás
-                de la decisión de empezar tu propio imperio.
-            </p>
+                        <div class="flip-back p-6 bg-white text-gray-800 flex items-start h-full">
+                            <div class="text-lg text-left">
+                                <b>Miedos - Conviértelos en Combustible:</b>
+                                <p>El miedo de llegar sin recursos, el miedo a la inestabilidad, el miedo de fallarle a
+                                    tu
+                                    familia... esos son los demonios que enfrentaste al pisar esta tierra.</p>
+                                <p class="mt-2">En nuestra industria, ese miedo tiene un nombre diferente: Necesidad de
+                                    Protección. Nuestro
+                                    negocio se basa en vender la solución a esa necesidad universal. Dejas de ser la
+                                    víctima de la
+                                    incertidumbre para convertirte en el arquitecto de la certeza para miles de latinos
+                                    que, como tú, buscan blindar su futuro.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="min-h-64 flip-card border-2 rounded-lg overflow-hidden bg-white shadow-xl" tabindex="0"
+                    aria-labelledby="meta-e">
+                    <div class="flip-inner h-full">
+                        <div class="flip-front p-6 bg-green-600 text-white flex items-center justify-center h-full">
+                            <span id="meta-e" class="text-9xl font-extrabold letter-only">E</span>
+                        </div>
+                        <div class="flip-back p-6 bg-white text-gray-800 flex items-start h-full">
+                            <div class="text-lg text-left">
+                                <b>Estrategia - El Mapa para la Riqueza Ilimitada</b>
+                                <p>Vence el miedo a lo desconocido con una Estrategia ÚNICA, probada y escalable.
+                                    Nuestro sistema no es otra charla de motivación; es una impresora de éxito.</p>
+                                <ul class="list-disc list-inside mt-2">
+                                    <li>Construir Ingreso Residual: Gana hoy por el trabajo que hiciste ayer, creando un
+                                        flujo de caja que resiste las recesiones.</li>
+                                    <li>Dominar el Nicho Latino: Accede a una comunidad leal y en crecimiento que
+                                        necesita tu experiencia y confianza.</li>
+                                    <li>Liderar y Duplicar: Desarrolla equipos que te permiten generar ingresos mientras
+                                        inviertes tu tiempo en tu crecimiento personal y liderazgo.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="min-h-64 flip-card border-2 rounded-lg overflow-hidden bg-white shadow-xl" tabindex="0"
+                    aria-labelledby="meta-t">
+                    <div class="flip-inner h-full">
+                        <div class="flip-front p-6 bg-yellow-600 text-white flex items-center justify-center h-full">
+                            <span id="meta-t" class="text-9xl font-extrabold letter-only">T</span>
+                        </div>
+                        <div class="flip-back p-6 bg-white text-gray-800 flex items-start h-full">
+                            <div class="text-lg text-left">
+                                <b>Tiempo - Prepárate con Especialistas</b>
+                                <p>En la alta gerencia, el tiempo es sinónimo de valor. Tu preparación será acelerada
+                                    con Especialistas y Licenciados con décadas de éxito en el mercado estadounidense.
+                                </p>
+                                <ul class="list-disc list-inside mt-2">
+                                    <li>Recibirás el guion de ventas de alto valor que te posiciona como experto
+                                        inmediatamente.</li>
+                                    <li>Dominarás el marco legal y financiero sin necesidad de un MBA.</li>
+                                    <li>Te capacitaremos para obtener las licencias necesarias de manera rápida y
+                                        efectiva.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="min-h-64 flip-card border-2 rounded-lg overflow-hidden bg-white shadow-xl" tabindex="0"
+                    aria-labelledby="meta-a">
+                    <div class="flip-inner h-full">
+                        <div class="flip-front p-6 bg-red-600 text-white flex items-center justify-center h-full">
+                            <span id="meta-a" class="text-9xl font-extrabold letter-only">A</span>
+                        </div>
+                        <div class="flip-back p-6 bg-white text-gray-800 flex items-start h-full">
+                            <div class="text-lg text-left">
+                                <b>Acciones - Tu Legado Comienza Hoy</b>
+                                <p>Basta de excusas, basta de esperar el momento "perfecto". La diferencia entre un
+                                    sueño y un objetivo es una fecha de inicio.</p>
+                                <p class="mt-2">La vida que siempre has querido no está detrás de la próxima promoción;
+                                    está detrás de la decisión de empezar tu propio imperio.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
-        <section id="citas" class="py-2">
+    <section id="citas" class="py-2">
         <div class="container mx-auto px-2 text-center">
-            <h2 class="text-3xl font-bold mb-2 text-secondary">Inicia tu Carrera Hoy</h2>
-            <p class="text-gray-300 mb-6">Regístrate para nuestro evento informativo y da el primer paso hacia el éxito.
+            <h2 class="text-3xl font-bold mb-2 text-dark">Inicia tu Carrera Hoy</h2>
+            <p class="text-dark-300 mb-6">Regístrate para nuestro evento informativo y da el primer paso hacia el éxito.
             </p>
             <a href="#contacto"
                 class="bg-primary text-white font-bold py-3 px-6 rounded-lg hover:bg-primary-hover">Regístrate
@@ -234,8 +312,8 @@
         </div>
     </section>
 
-    <section id="sueñoAmericano" class="py-8 bg-dark">
-        <div class="container mx-auto px-6 text-justify max-w-3xl">
+    <section id="sueñoAmericano" class="py-8 bg-light">
+        <div class="container mx-auto px-6 text-justify max-w-5xl">
             <h2 class="text-3xl mb-2 text-center">¡Es hora de ACCIONAR!</h2>
             <h3 class="text-xl">Toma la valentía que usaste para cruzar fronteras y enfócala
                 en construir tu libertad. Regístrate ahora en nuestro Evento Exclusivo y:
@@ -250,26 +328,26 @@
         </div>
     </section>
     <!-- Contacto Section -->
-    <section id="contacto" class="py-12 bg-dark">
+    <section id="contacto" class="py-12 bg-light">
         <div class="container mx-auto px-6">
-            <h2 class="text-3xl font-bold text-center mb-6 text-secondary">¿Tienes Preguntas?</h2>
+            <h2 class="text-3xl font-bold text-center mb-6 text-dark">¿Tienes Preguntas?</h2>
             <form class="max-w-lg mx-auto">
                 <div class="mb-4">
-                    <label for="nombre" class="block text-gray-700 font-bold mb-2">Nombre</label>
+                    <label for="nombre" class="block text-dark-700 font-bold mb-2">Nombre</label>
                     <input type="text" id="nombre" name="nombre"
-                        class="w-full px-3 py-2 border rounded-lg text-gray-700 focus:outline-none focus:ring-2 focus:ring-primary"
+                        class="w-full px-3 py-2 border rounded-lg text-dark-700 focus:outline-none focus:ring-2 focus:ring-primary"
                         required>
                 </div>
                 <div class="mb-4">
-                    <label for="apellido" class="block text-gray-700 font-bold mb-2">Apellido</label>
+                    <label for="apellido" class="block text-dark-700 font-bold mb-2">Apellido</label>
                     <input type="text" id="apellido" name="apellido"
-                        class="w-full px-3 py-2 border rounded-lg text-gray-700 focus:outline-none focus:ring-2 focus:ring-primary"
+                        class="w-full px-3 py-2 border rounded-lg text-dark-700 focus:outline-none focus:ring-2 focus:ring-primary"
                         required>
                 </div>
                 <div class="mb-4">
-                    <label for="correo" class="block text-gray-700 font-bold mb-2">Correo Electrónico</label>
+                    <label for="correo" class="block text-dark-700 font-bold mb-2">Correo Electrónico</label>
                     <input type="email" id="correo" name="correo"
-                        class="w-full px-3 py-2 border rounded-lg text-gray-700 focus:outline-none focus:ring-2 focus:ring-primary"
+                        class="w-full px-3 py-2 border rounded-lg text-dark-700 focus:outline-none focus:ring-2 focus:ring-primary"
                         required>
                 </div>
                 <div class="text-center">
@@ -282,8 +360,8 @@
 
     <!-- Modal -->
     <div id="contact-modal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden">
-        <div class="bg-dark rounded-lg shadow-xl p-8 max-w-sm mx-auto border border-secondary">
-            <h3 class="text-2xl font-bold text-secondary mb-4">¡Gracias!</h3>
+        <div class="bg-light rounded-lg shadow-xl p-8 max-w-sm mx-auto border border-secondary">
+            <h3 class="text-2xl font-bold text-dark mb-4">¡Gracias!</h3>
             <p class="text-light mb-6">Gracias por contactarnos, pronto nos comunicaremos con usted.</p>
             <button id="close-modal-button"
                 class="bg-primary text-white font-bold py-2 px-4 rounded-lg hover:bg-primary-hover w-full">
@@ -293,7 +371,7 @@
     </div>
 
     <!-- Footer -->
-    <footer class="bg-dark text-white py-6">
+    <footer class="bg-light text-white py-6">
         <div class="container mx-auto px-6 text-center">
             <p>&copy; 2025 Tu Empresa. Todos los derechos reservados.</p>
         </div>
